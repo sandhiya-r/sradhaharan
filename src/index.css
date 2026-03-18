@@ -23,6 +23,11 @@
 
   --radius: 0.75rem;
 
+  
+  --container-center: true;
+  --container-padding: 2rem;
+
+
 }
 
 @layer base{
