@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Tiny5&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
 @import "tailwindcss";
 @theme {
     --color-background: #FFF7FB;           /* very pale blossom pink page background */
@@ -6,7 +7,7 @@
 
   --color-card: #FFE4EC;                 /* soft sakura pink for cards */
 
-  --color-primary: #F6AFCB;              /* main cherry blossom pink */
+  --color-primary: #E8B4BC;              /* main cherry blossom pink */
   --color-primary-foreground: #4A2333;   /* dark rosy text on primary */
 
   --color-secondary: #F9D8E6;            /* lighter blush pink */

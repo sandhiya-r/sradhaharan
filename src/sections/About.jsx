@@ -37,8 +37,8 @@ export const About = () => {
                         </div>
 
                         <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
-                            Building the future,
-                            <span className="tiny5-regular italic font-normal text-primary"> one component at a time.</span>
+                            Thoughtful design,
+                            <span className="tiny5-regular italic font-normal text-primary"> for every detail.</span>
                         </h2>
 
                         <div className="space-y-4 text-muted-foreground animate-fade-in animation-delay-200">
@@ -58,7 +58,7 @@ export const About = () => {
 
                         <div className="glass rounded-2xl p-6 animate-fade-in animation-delay-300">
                             <p className="text-lg font-medium italic text-foreground">
-                                "NEED TO PUT SOME HIGHLIGHT HERE"
+                                I enjoy creative thinking, design and problem-solving. As an Electrical and Biomedical engineering undergraduate student, I gained experience with engineering design and hardware. I bring a perspective to software development that reflects my unique background.
                             </p>
                         </div>
                     </div>

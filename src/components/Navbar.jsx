@@ -43,7 +43,12 @@ export const Navbar = () => {
                 </div>
                 {/*CTA Button*/}
                 <div className="hidden md:block">
-                    <Button size="sm">Contact Me</Button>
+                   <Button 
+                    onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                    size="sm"
+                    >
+                    Contact Me
+                    </Button>
                 </div>
 
                <button className="md:hidden p-2 text-foreground cursor-pointer" onClick = {() => setisMobileMenuOpen((current)=> !current)}>
@@ -57,7 +62,15 @@ export const Navbar = () => {
                         {navLinks.map((link, index)=> (
                             <a href={link.href} key={index} onClick={() => setisMobileMenuOpen(false)} className="text-lg text-muted-foreground hover:text-muted-foreground py-2">{link.label}</a>
                         ))}
-                        <Button onClick={()=> setisMobileMenuOpen(false)} size="sm">Contact Me</Button>
+                        <Button 
+                        onClick={() => {
+                            setisMobileMenuOpen(false);
+                            document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                        }} 
+                        size="sm"
+                        >
+                        Contact Me
+                        </Button>
                     </div>
                 </div>
             </div>}
