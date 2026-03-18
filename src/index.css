@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Tiny5&display=swap');
+@import "tailwindcss";
+@theme {
+    --color-background: #FFF7FB;           /* very pale blossom pink page background */
+  --color-foreground: #4A3A42;           /* muted plum-brown text */
+
+  --color-card: #FFE4EC;                 /* soft sakura pink for cards */
+
+  --color-primary: #F6AFCB;              /* main cherry blossom pink */
+  --color-primary-foreground: #4A2333;   /* dark rosy text on primary */
+
+  --color-secondary: #F9D8E6;            /* lighter blush pink */
+  --color-secondary-foreground: #5A4450; /* readable text on secondary */
+
+  --color-muted: #FFF0F5;                /* subtle section/input background */
+  --color-muted-foreground: #7A6570;     /* softer text */
+
+  --color-border: #F3BDD0;               /* gentle pink border */
+
+  --color-highlight: #FFD7E5;            /* hover/selected/highlight */
+  --color-surface: #FFFFFF;              /* clean white elevated surface */
+
+  --radius: 0.75rem;
+
+}
+
+@layer base{
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: "Inter", sans-serif;
+  }
+
+  .font-serif {
+    font-family: "Playfair Display", serif;
+  }
+
+  .dotgothic16-regular {
+  font-family: "DotGothic16", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.tiny5-regular {
+  font-family: "Tiny5", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+}
+
+@layer components{
+  .glass{
+    background-color: color-mix(in srgb, var(--color-surface) 50%, transparent);
+    backdrop-filter: blur(16px);
+    border: 1px solid color-mix(in srgb, var(--color-border) 50%, transparent);
+  }
+
+  .glass-strong{
+    background-color: color-mix(in srgb, var(--color-surface) 80%, transparent);
+    backdrop-filter: blur(16px);
+    border: 1px solid color-mix(in srgb, var(--color-border) 60%, transparent);
+  }
+
+  .glow-text{
+    text-shadow: 0 0 30px
+      color-mix(in srgb, var(--color-primary) 50%, transparent);
+  }
+}
+
+@layer utilities{ /*Used for utility classes like animations*/
+
+  @keyframes fade-in { /*initial condition will be "From" and end condition will be "To*/
+     from {
+        opacity: 0;
+        transform: translateY(20px);
+        filter: blur(10px);
+     }
+     to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+     }
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-marquee {
+    animation: marquee 30s linear infinite;
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 0.5s ease-out both;
+  }
+
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+
+
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+  
+  @keyframes animated-border {
+    0% {
+      stroke-dashoffset: 400;
+    }
+    100% {
+      stroke-dashoffset: -550;
+    }
+  }
+  .group:hover .animated-border-path {
+    animation: animated-border 1.5s linear infinite;
+  }
+
+  .animated-border{
+
+  }
+  .animated-border:hover{
+    background-color: color-mix(in srgb, var(--color-primary) 15%, transparent);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 0 20px color-mix(in srgb, var(--color-primary) 20%, transparent);
+  }
+  
+  .timeline-glow {
+    box-shadow: 0 0 40px
+      color-mix(in srgb, var(--color-primary) 35%, transparent),
+    0 0 80px color-mix(in srgb, var(--color-primary) 25%, transparent);
+  }
+}
