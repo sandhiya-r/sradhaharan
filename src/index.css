@@ -33,6 +33,10 @@
 @layer base{
   html {
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    zoom: 1;
+  
   }
 
   body {
@@ -40,6 +44,7 @@
     color: var(--color-foreground);
     font-family: "Inter", sans-serif;
   }
+
 
   .font-serif {
     font-family: "Playfair Display", serif;

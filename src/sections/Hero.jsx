@@ -37,8 +37,8 @@ export const Hero = () => {
             </div>
 
             {/* Content — above canvas */}
-            <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="container mx-auto px-8 md:px-16 lg:px-24 pt-32 pb-20 relative z-10">
+                <div className="grid xl:grid-cols-2 gap-20 items-center">
 
                     {/* Left column - text */}
                     <div className="space-y-8">
@@ -51,10 +51,10 @@ export const Hero = () => {
                         </div>
 
                         <div className="space-y-4">
-                            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-200">
+                            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
                                 Engineering <span className="text-primary/80 glow-text font-serif">solutions</span> that solve <span className="font-serif text-primary/80 italic"> real </span> problems
                             </h1>
-                            <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-400">
+                            <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
                                 Hi, I'm Sandhiya Radhaharan. I am a Masters student at UBC studying Computer Engineering with experience building frontend and backend software systems for mobile and web applications.
                             </p>
                         </div>
@@ -73,23 +73,22 @@ export const Hero = () => {
                     </div>
 
                      {/* Right column - 3D canvas, only occupies this column */}
-                        <div className="hidden lg:block relative h-150">
-                            <Canvas camera={{ position: [7, 3, 5], fov: 30 }}>
-                                <Suspense fallback={null}>
-                                    <ambientLight intensity={1.5} />
-                                    <directionalLight position={[5, 5, 5]} intensity={1} />
-                                    <group scale={0.05}>
-                                        <Model />
-                                    </group>
-                                    <OrbitControls
-                                        enableZoom={false}
-                                        enablePan={false}
-                                        enableRotate={true}
-                                        
-                                    />
-                                </Suspense>
-                            </Canvas>
-                        </div>
+                    <div className="hidden xl:block relative h-80 xl:h-126 2xl:h-[700px]">
+                        <Canvas camera={{ position: [7, 3, 5], fov: 30 }}>
+                            <Suspense fallback={null}>
+                                <ambientLight intensity={1.5} />
+                                <directionalLight position={[5, 5, 5]} intensity={1} />
+                                <group scale={0.05}>
+                                    <Model />
+                                </group>
+                                <OrbitControls
+                                    enableZoom={false}
+                                    enablePan={false}
+                                    enableRotate={true}
+                                />
+                            </Suspense>
+                        </Canvas>
+                    </div>
 
                 </div>
                 {/*Skills Section*/}

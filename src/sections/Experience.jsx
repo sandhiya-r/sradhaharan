@@ -28,9 +28,9 @@ const experiences = [
 ]
 export const Experience = () => {
     return(
-        <section id="experience" className="py-32 relative overflow-hidden">
+        <section id="experience" className="py-28 relative overflow-hidden">
             <div className = "absolute top-1/2 left-1/4 w-106 h-126 bg-emerald-100/20 rounded-full blur-3xl -translate-y-1/2"/>
-            <div className="container mx-auto px-6 relative z-10">
+          <div className="container mx-auto px-8 md:px-16 lg:px-24 pt-32 pb-20 relative z-10">
                 {/*Section Header */}
                 <div className="max-w-3xl mb-16">
                     <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase animate-fade-in">Career Journey</span>
